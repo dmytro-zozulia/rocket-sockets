@@ -35,7 +35,7 @@ home.addEventListener('click', function(){
 navUl.addEventListener( 'click', checkLi );
 
 function checkLi( event ) {
-  // Just for testing... remove the following line:
+  // Just for testing... remove the following line maybe:
   console.log( 'clicked on', event.target.tagName );
   // Only apply our actions if we really clicked on the link.
   if ( event.target.tagName === 'A' ) {

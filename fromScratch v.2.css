@@ -10,10 +10,11 @@
 
 @font-face{
 	font-family: 'Josefin Sans', sans-serif;
+	src: '"https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,600&display=swap'
 }
 
 body {
-	font-family: Josefin Sans;
+	font-family: 'Josefin Sans';
 }
 
 .logo-text{
@@ -90,7 +91,7 @@ header {
 .menu a {
 	color:rgb(226,226,226);
 	text-decoration: none;
-	letter: 3px;
+	letter-spacing: 3px;
 	font-weight: regular;
 	font-size: 3vh;
 }
@@ -183,7 +184,7 @@ header {
 
 .platform-promo{
 	
-	wdith: 120%;
+	width: 120%;
 	grid-area: platform-promo;
 	display: flex;
 	flex-direction: column;
