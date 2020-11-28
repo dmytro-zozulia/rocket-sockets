@@ -1,0 +1,366 @@
+@charset "utf-8";
+/* CSS Document */
+
+*, *::before, *::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+@font-face{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+	font-family: Josefin Sans;
+}
+
+.logo-text{
+	font-family: 'Marck Script', cursive;
+	font-size: 2rem;
+}
+
+/*NAV with GRID*/
+
+
+.logo-text{
+	font-family: 'Marck Script', cursive;
+	font-size: 5vh;
+}
+
+
+ .nav {
+	width: 100%;
+	min-height: 10vh;
+	padding: 20px 0;
+	background-color: #090C02;
+	color: white;
+	display: grid;
+	grid-template-columns: 40% 60%;
+	grid-template-areas: 
+		"logo-guitar bandName menuLinks";
+	align-items: center;
+	margin-bottom: 4%;
+
+}
+
+header {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	
+
+}
+
+
+
+.nav .logo {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+/*Need to shift this thing somewhere, where it would be attached to logo*/
+.nav .logo img {
+	position: absolute;
+	transform: translate(-7rem, -1.6rem);
+	max-width: 10vh;
+
+}
+
+
+.menu li{
+	display: inline;
+}
+
+.menu {
+	display: flex;
+	width: 40%;
+	justify-content: space-around;
+	position: relative;
+	left: 35%;
+	flex-direction: row;
+	top: 30%;
+
+
+}
+
+.menu a {
+	color:rgb(226,226,226);
+	text-decoration: none;
+	letter: 3px;
+	font-weight: regular;
+	font-size: 3vh;
+}
+
+
+.cool-link {
+	
+	border-bottom: 2px solid red;
+	padding-bottom: 5px;
+	
+}
+
+/*.cool-link::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: red;
+	transition: width .3s;
+}*/
+
+/*.cool-link:hover::after{
+	width: 100%;
+	transition: width .3s;
+}*/
+
+
+/* NAV with GRID - END*/
+
+
+.home{
+	display: grid;
+	grid-template-columns: 40% 60%;
+	grid-template-areas: 
+		"greeting-text title-img"
+		"platform-promo title-img";
+	align-items: center;
+	margin: 4% 4% 4% 0;
+}
+
+.title-img {
+	grid-area: title-img;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	
+}
+
+.title-img img {
+	width: 85%;
+	margin: 2% 0 0 0;
+}
+
+.content-wrapper{
+	width: 105%;
+	margin-top: -20%;
+}
+
+.greeting-text {
+	grid-area: greeting-text;
+	width: 120%;
+	height: 120%;
+	position: relative;
+	margin-top: -38.5%;
+	margin-left: -7.8%;
+}
+
+.greeting-text h1 {
+	font-size: 5vw;
+	text-align: end;
+	
+}
+
+.greeting-text p {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-left: 40%;
+	margin-top: 6%;
+	font-size: 3vh;
+}
+
+
+.content-wrapper img{
+	position: relative; 
+  	width: 110%;
+}
+	
+
+.platform-promo{
+	
+	wdith: 120%;
+	grid-area: platform-promo;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 8%;
+	
+	
+	
+}
+.platform-promo p {
+	font-size: 3.5vh;
+	font-weight: 600;
+	position: relative;
+	right: 1%;
+	margin-bottom: 4%;
+	
+	
+}
+
+.platform-promo img{
+	width: 60%;
+	align-self: center;
+	
+}
+
+.story {
+	display: grid;
+	grid-template-columns: 65% 35%;
+	grid-template-areas: 
+		"inside-studio  story-text"
+		"inside-studio  tangled-cords";
+	align-items: center;
+	justify-content: center;
+	margin: 4% 2% 4% 8%;
+
+	position: 
+		relative;
+
+}
+
+.tangled-cords{
+	grid-area: tangled-cords;
+	width: 100%;
+
+	position: relative;
+	right: 10vw;
+	margin-left: -3vw;
+	
+}
+.inside-studio {
+	grid-area: inside-studio;
+	width: 100%;
+
+	position: relative;
+	right: 10vw;
+	bottom: 20vh;
+}
+
+.inside-studio img {
+	width: 120%;
+	
+}
+
+.story-text {
+	grid-area: story-text;
+	width: 90%;
+
+	position: relative;
+	right: 10vw;
+	top: 10vh;
+}
+
+.story-text h1 {
+	font-size: 5vw;
+	text-align: start;
+	
+}
+.contact-text h1 {
+	font-size: 5vw;
+}
+
+.contact-text p {
+	font-size: 3.5vh;
+	font-weight: 300;
+}
+
+
+
+.story-text .paragraph1{
+	margin-top: 3vh;
+}
+
+.story-text .paragraph2{
+	margin-top: 3vh;
+}
+
+.story-text p{
+font-size: 3.5vh;
+	font-weight: 300;
+}
+
+.background-line {
+	position: absolute;
+	display: flex;
+	width:  110%;
+	margin-left: -7vw;
+	overflow: hidden;
+	
+}
+
+
+
+.contact {
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+	grid-template-areas: "contact-left contact-middle contact-right";
+	
+	margin: 5% auto;
+
+}
+#contact-line {
+	position: absolute;
+	width:  80%;
+	z-index: -1;
+	top: 5%;
+		overflow: hidden;
+	
+}
+
+#contact-left {
+	display: grid;
+/*	grid-template-areas:"mailbox-xs mailbox-sm mailbox-md"
+						"contact-text contact-text contact-text";
+*/
+
+	grid-template-rows: 40% 60%;
+  grid-template-columns: 20% 30% 40%;
+	border: 2px solid violet;
+	grid-area: "contact-left";
+}
+#contact-middle {
+	grid-area: "contact-middle";
+}
+
+#contact-right{
+	display: grid;
+	grid-area: "contact-right";
+	
+	
+}
+
+#contact-text {
+	border: 2px solid teal;
+	grid-area: "contact-text";
+	display: inherit;
+	grid-column: 1/4;
+}
+
+#mailbox-xs {
+	max-width: 10%;
+	border: 2px solid orange;
+/*	grid-area: "mailbox-xs";*/
+	grid-column: 1/2;
+}
+#mailbox-sm {
+	max-width: 20%;
+	border: 2px solid green;
+	/*grid-area: "mailbox-sm";*/
+	grid-column: 2/3;
+}
+#mailbox-md {
+	max-width: 35%;
+	border: 2px solid red;
+/*	grid-area: "mailbox-md";*/
+	grid-column: 3/4;
+}
+#mailbox-xl {
+	max-width: 100%;
+}

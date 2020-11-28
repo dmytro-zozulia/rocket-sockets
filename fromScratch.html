@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="fromScratch.css">
+	<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+</head>
+	
+	<!--Notes
+
+Status
+
+To fix: 
+- back-up fonts 
+- line through the section(how to do that - maybe ask)
+- clean code
+
+
+Next steps:
+X finish the design > done - finished on footer, left is to change some style in the second step
+- polish the things to 85%
+	next steps 
+		- make responsive
+- download it somewhere (to have as your project and have some question to ask)
+- try to fix issues
+- if issues can't be fixed - go design and implement the next project
+
+Next project:
+- simple design 
+- some JS interactivity to train
+
+-->
+	
+<header> 
+	
+	<!--TEST NAV-->
+	<nav>
+		<div class="nav">
+		<div class="logo">
+		<img class="logo-img" src="assets/images/triangular-sharp-guitar-silhouette (1).svg" alt="logo" height="87" width="100">
+		
+		<h3 class="logo-text">Rocket Sockets</h3>
+			</div>
+		<ul class="menu">
+			<li id="home-link"><a class="cool-link" href="#">home</a></li>
+			<li id="story-link"><a  href="#story">our story</a></li>
+			<li id="contact-link"><a  href="#scrolling-target">reach us</a></li>
+			
+		</ul>
+	</div>
+		</nav>
+	</header>
+	<main>
+	<section id="home">
+		<div class="content-wrapper">
+			<img class="greeting-pulse" src="assets/images/Path 15.png" alt="pulse">
+			<div class="greeting-text">
+			<h1 class="main-text">SHARP &amp; LOUD</h1>
+			<p class="addon-text">that's how we like it</p>
+		</div>
+		</div>
+		
+		
+		
+		<div class="title-img">
+		<img src="assets/images/Component 1 – 1.png" alt="title-picture">
+			</div>
+		
+		<div class="platform-promo">
+		<p>Waste no time - listen us here:</p>
+		<a href="#"><img id="spotify button" src="assets/images/019-spotify.png" alt="spotify button"></a>
+		<a href="https://www.youtube.com"><img id="youtube button" src="assets/images/002-youtube.png" alt="youtube button"></a>
+		<a href="#"><img id="soundcloud button" src="assets/images/020-soundcloud.png" alt="soundclud button"></a>
+		<a href="#"><img id="vimeo button" src="assets/images/011-vimeo.png" alt="vimeo button"></a>
+			</div>
+		
+		
+	</section>
+		
+	<section id="story">
+		<img class="background-line" alt="background-line" src="assets/images/Path 18.png">
+		
+		<img class="inside-studio" src="assets/images/Mask Group 3.png" alt="inside-studio">
+		
+		<div class="story-text">
+		<h1>our story</h1>
+		<p class="paragraph1">started with a few cheap microphones and crappy guitars on a ordinary Friday night in a local pub.</p>
+		<p class="paragraph2">Since we are living our best life by writing best music we can and performing the hell out of it</p>
+			
+		
+		</div>
+		
+		<img class="tangled-cords" src="assets/images/Mask Group 2.png" alt="tangled-cords">
+		
+		</section>
+		<div id="scrolling-target"></div>
+		<div id="string-add"></div>
+		<section id="contact">
+			<img id="contact-line" alt="background-line" src="assets/images/Path 32.png">
+			<img id="contact-line-2" alt="background-line" src="assets/images/Path 34.png">
+		
+		<div id="contact-left">
+			<img id="mailbox-xs" src="assets/images/Mask Group 4.png" alt="smallest mailbox">
+			<img id="mailbox-sm" src="assets/images/Mask Group 4.png" alt="small mailbox">
+			<img id="mailbox-md" src="assets/images/Mask Group 4.png" alt="medium mailbox">
+				
+			<div id="contact-text">
+				
+				<h1>reach us</h1>
+				<p class="contact-details">to play at your place, wedding, event, drink together, we don't care</p>
+				<p class="contact-details" style="font-weight: 700;">write to us and let's figure something out together</p>
+				
+			</div>
+		</div>
+		<div id="contact-middle">
+			<img id="mailbox-xl" src="assets/images/Mask Group 4.png" alt="smallest mailbox">
+		</div>
+		<div id="contact-right">
+			<div id="contact-phone">
+				<h1 contact>telephone</h1>
+				<p class="contact-details">+1(0) 932 032 02</p>
+			</div>
+			<div id="contact-address">
+				<h1>adress</h1>
+				<p class="contact-details">75  Jesmond Rd KILCHOAN, PA34 4ZR</p>
+			</div>
+			<div id="contact-email">
+				<h1>e-mail</h1>
+				<p class="contact-details">rocketsockets@junkies.com</p>
+			</div>
+			
+		</div>
+		
+		</section>
+		
+	</main>
+	<footer>
+	
+	<h1 id="footer-quote">
+		be our guest <br> put our sound to the test
+		</h1>
+		<img id="gtr-strings" src="assets/images/Group 33.png" alt="guitar-ornament">
+	<p id="legal-notice">
+		All rights reserved 2020 <br>Rocket Sockets Inc</p>
+
+		<button id="scroll-up-btn"> <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="24" height="24"
+viewBox="0 0 226 226"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,226v-226h226v226z" fill="none"></path><g fill="#ffffff"><path d="M113,0c-62.40425,0 -113,50.59575 -113,113c0,62.40425 50.59575,113 113,113c62.40425,0 113,-50.59575 113,-113c0,-62.40425 -50.59575,-113 -113,-113zM103.58333,178.91667v-90.88025l-40.26567,40.26567l-15.98008,-15.98008l65.66242,-65.67183l65.67183,65.67183l-15.98008,15.98008l-40.27508,-40.26567v90.88025z"></path></g></g></svg></button>
+	</footer>
+	
+	
+	
+<script src="fromScratch.js"></script>
+<body>
+</body>
+</html>
