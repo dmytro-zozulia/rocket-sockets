@@ -1,10 +1,10 @@
 # rocket-sockets
 
-Preview the site: https://badgerwannabe.github.io/rocket-sockets/fromScratch.html
+Preview the site: https://badgerwannabe.github.io/rocket-sockets/index.html
 
 Plans 
+- finish responsiveness
 - finish the SoMe icons
-- make responsive
-- clean code
-- make some small fade-in animation
+- clean the code
+- add animation
 
