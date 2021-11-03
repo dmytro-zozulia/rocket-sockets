@@ -1,0 +1,761 @@
+@charset "utf-8";
+/* CSS Document */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: Josefin Sans;
+  max-height: 100%;
+}
+main {
+  height: 100%;
+}
+
+/*NAV with GRID*/
+
+.logo-text {
+  font-family: "Marck Script", cursive;
+  font-size: 3rem;
+}
+
+.nav {
+  width: 100%;
+  min-height: 10vh;
+  padding: 20px 0;
+  background-color: #090c02;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn div {
+  width: 40px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  z-index: 5;
+}
+
+.nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+}
+
+/*Need to shift this thing somewhere, where it would be attached to logo*/
+.nav .logo img {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  display: inline;
+  margin-left: 2rem;
+}
+
+.menu a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.cool-link {
+  border-bottom: 2px solid red;
+  padding-bottom: 5px;
+}
+
+/* NAV with GRID - END*/
+
+#home {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-areas:
+    "greeting-text title-img"
+    "platform-promo title-img";
+  align-items: center;
+  margin: 10vh 0;
+  justify-content: center;
+}
+
+.title-img {
+  grid-area: title-img;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title-img img {
+  width: 75%;
+  margin: 2% 0 0 0;
+}
+
+.content-wrapper {
+  width: 100%;
+}
+
+.greeting-text {
+  grid-area: greeting-text;
+  width: 120%;
+  height: 120%;
+  position: relative;
+  margin-top: -38.5%;
+  margin-left: -7.8%;
+}
+
+.greeting-text h1 {
+  font-size: 5rem;
+  text-align: end;
+}
+
+.greeting-text p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 40%;
+  margin-top: 6%;
+  font-size: 1.5rem;
+}
+
+.content-wrapper img {
+  position: relative;
+  width: 110%;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.platform-promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-top: 10rem;
+}
+.platform-promo p {
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.social-buttons {
+  margin-top: 1.5rem;
+}
+.platform-promo .social-buttons a {
+  margin-left: 2rem;
+}
+.platform-promo img {
+  max-height: 2.5rem;
+}
+
+#story {
+  display: grid;
+  grid-template-columns: 50% 40%;
+  grid-gap: 15%;
+  grid-template-areas:
+    "inside-studio  story-text"
+    "inside-studio  tangled-cords";
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.inside-studio {
+  grid-area: inside-studio;
+  width: 110%;
+  position: relative;
+  bottom: 2rem;
+}
+
+.story-text {
+  grid-area: story-text;
+  width: 100%;
+  position: relative;
+  align-self: flex-start;
+}
+
+.tangled-cords {
+  grid-area: tangled-cords;
+  width: 100%;
+  position: relative;
+  right: 4vw;
+  bottom: 4rem;
+  align-self: flex-start;
+}
+
+.story-text h1 {
+  font-size: 4rem;
+  text-align: start;
+}
+
+.story-text .paragraph1 {
+  margin-top: 3vh;
+}
+
+.story-text .paragraph2 {
+  margin-top: 3vh;
+}
+
+.story-text p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#contact-text h1 {
+  font-size: 4rem;
+}
+
+.background-line {
+  position: absolute;
+  width: 110%;
+  overflow: hidden;
+  bottom: 5rem;
+}
+
+#contact-line {
+  position: absolute;
+  display: flex;
+  width: 80%;
+  z-index: -1;
+  top: 5%;
+  overflow: hidden;
+}
+
+#contact-line-2 {
+  position: absolute;
+  display: flex;
+  width: 40%;
+  z-index: -1;
+  right: 93.5%;
+  top: 14%;
+  overflow: hidden;
+}
+
+#contact {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+  margin: 5% auto;
+  position: relative;
+}
+
+#scrolling-target {
+  position: relative;
+  padding: 15px;
+  border-top: 1px solid transparent;
+  margin-top: -50px;
+  top: 25px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+#scrolling-target::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid transparent;
+}
+
+#scrolling-target::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid transparent;
+}
+
+#contact-left {
+  display: grid;
+  /*grid-template-areas: "mailbox-xs mailbox-sm mailbox-md"
+						"contact-text contact-text contact-text";
+*/
+  justify-content: space-evenly;
+
+  grid-template-rows: 40% 60%;
+  grid-template-columns: 20% 30% 40%;
+}
+
+#contact-right {
+  display: grid;
+  overflow: hidden;
+}
+
+#contact-text {
+  grid-column: 1/4;
+  align-self: flex-start;
+}
+
+#mailbox-xs {
+  max-width: 40%;
+  grid-column: 1/2;
+  transform: rotate(60deg) translate(0, 5vh);
+}
+#mailbox-sm {
+  max-width: 55%;
+
+  grid-column: 2/3;
+  transform: rotate(180deg);
+}
+#mailbox-md {
+  max-width: 80%;
+  grid-column: 3/4;
+  transform: rotate(30deg) translate(0, -5vh);
+}
+#mailbox-xl {
+  max-width: 100%;
+}
+
+#contact-right h1 {
+  font-size: 2.5rem;
+}
+
+.contact-details {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+#contact-phone {
+  position: relative;
+  left: 20%;
+  top: 10%;
+}
+
+#contact-address {
+  position: relative;
+  top: 10%;
+}
+
+#contact-email {
+  position: relative;
+  left: 20%;
+  top: 20%;
+}
+
+footer {
+  width: 100%;
+  height: 15vh;
+  padding: 0;
+  background-color: #090c02;
+  color: white;
+  display: grid;
+  grid-template-columns: 40% 20% 30% 5%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+footer h1 {
+  font-style: italic;
+  margin: 0 3vw;
+  font-size: 2rem;
+}
+
+#legal-notice {
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+#scroll-up-btn {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#gtr-strings {
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1376px) {
+  .greeting-text h1 {
+    font-size: 4rem;
+  }
+
+  .platform-promo p {
+    font-size: 1.5rem;
+  }
+
+  .contact-details {
+    font-size: 1rem;
+  }
+  .story-text p {
+    font-size: 1rem;
+  }
+  #contact-line-2 {
+    top: 15%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #home {
+    margin: 5vh 0 0 0;
+  }
+  .greeting-text h1 {
+    margin-left: 2rem;
+  }
+
+  .greeting-text p {
+    font-size: 1rem;
+  }
+
+  .platform-promo {
+    margin-top: 5rem;
+  }
+
+  .platform-promo p {
+    font-size: 1rem;
+  }
+  .menu a {
+    font-size: 1rem;
+  }
+
+  .logo-text {
+    font-size: 2rem;
+  }
+  .nav .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .platform-promo img {
+    max-height: 2rem;
+  }
+  .story-text h1 {
+    font-size: 3rem;
+  }
+
+  #contact-text h1 {
+    font-size: 3rem;
+  }
+  #contact-right h1 {
+    font-size: 2rem;
+  }
+
+  footer h1 {
+    font-size: 1.5rem;
+  }
+  .platform-promo .social-buttons a {
+    margin-left: 1rem;
+  }
+  .social-buttons img {
+    max-height: 1.5rem;
+  }
+
+  #story {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 5%;
+    grid-template-areas:
+      "inside-studio  story-text"
+      "inside-studio  tangled-cords";
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    margin-top: 5%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .inside-studio {
+    grid-area: inside-studio;
+    width: 100%;
+    position: relative;
+
+    align-self: flex-end;
+  }
+
+  .story-text {
+    grid-area: story-text;
+    width: 100%;
+    position: relative;
+    align-self: flex-start;
+  }
+
+  .tangled-cords {
+    grid-area: tangled-cords;
+    width: 80%;
+    position: relative;
+    right: 4vw;
+    bottom: 2rem;
+    align-self: flex-start;
+  }
+  .background-line {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #contact-text h1 {
+    font-size: 2rem;
+  }
+  #contact-right h1 {
+    font-size: 1.5rem;
+  }
+
+  #contact {
+    margin-top: 15%;
+  }
+
+  .story-text h1 {
+    font-size: 2rem;
+  }
+  #scrolling-target {
+    padding: 0;
+  }
+  footer h1 {
+    font-size: 1rem;
+  }
+  #legal-notice {
+    font-size: 0.75rem;
+    line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  header {
+    position: relative;
+  }
+
+  .nav {
+    overflow-x: hidden;
+  }
+  .menu {
+    position: absolute;
+    right: 0;
+    height: 90vh;
+    top: 10vh;
+    background: #090c02;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .toggle .menu-btn_line1 {
+    transform: rotate(-45deg) translate(-8px, 10px);
+  }
+  .toggle .menu-btn_line2 {
+    opacity: 0;
+  }
+  .toggle .menu-btn_line3 {
+    transform: rotate(45deg) translate(-8px, -10px);
+  }
+  .menu-active {
+    transform: translateX(0%);
+  }
+
+  .menu li {
+    opacity: 0;
+  }
+  .menu a {
+    font-size: 1.5rem;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+  #home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title-img"
+      "greeting-text"
+      "platform-promo";
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    grid-gap: 0;
+    padding: 0;
+  }
+
+  .title-img img {
+    width: 100%;
+    margin: 0;
+    filter: brightness(80%);
+  }
+  .content-wrapper {
+    margin-top: -40%;
+    z-index: 2;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 1)
+    );
+
+    padding: 3rem 0;
+  }
+  .content-wrapper img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    opacity: 1;
+  }
+  .greeting-text {
+    grid-area: greeting-text;
+    width: 100%;
+    height: 120%;
+    position: relative;
+    margin: 0;
+    margin-top: -35%;
+  }
+  .greeting-text h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .platform-promo {
+    align-items: center;
+    margin: 4rem 0;
+  }
+  .platform-promo p {
+    font-size: 1.5rem;
+  }
+
+  .social-buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    width: 20rem;
+  }
+
+  .social-buttons img {
+    max-height: 2rem;
+  }
+
+  #story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tangled-cords {
+    display: none;
+  }
+  .story-text {
+    position: initial;
+    margin: 0 5% 10% 5%;
+    width: 90%;
+  }
+
+  #contact {
+    display: grid;
+    grid-template-columns: 45% 40%;
+    justify-content: center;
+    margin: 5% auto;
+    align-items: center;
+    position: relative;
+  }
+
+  #contact-line {
+    display: none;
+  }
+
+  #mailbox-sm,
+  #mailbox-md,
+  #mailbox-xs {
+    display: none;
+  }
+  #contact-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr;
+  }
+
+  #contact-right {
+    grid-column: 1/3;
+  }
+
+  #contact-phone {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+  #contact-address {
+    position: relative;
+    top: auto;
+  }
+  #contact-email {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+
+  #mailbox-sm {
+    display: block;
+    position: absolute;
+    transform: rotate(0) translate(19rem, 15rem);
+  }
+  #gtr-strings {
+    width: 200%;
+    transform: translateX(-5rem);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #mailbox-sm {
+    transform: translate(16rem, 13rem);
+  }
+  #gtr-strings {
+    width: 300%;
+  }
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  .nav .logo {
+    margin: 0.5rem;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
