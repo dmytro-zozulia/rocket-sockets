@@ -366,7 +366,7 @@ header {
 
 footer {
   width: 100%;
-  height: 15vh;
+  height: 17vh;
   padding: 0;
   background-color: #090c02;
   color: white;
@@ -543,13 +543,10 @@ footer h1 {
 }
 
 @media screen and (max-width: 650px) {
-  header {
-    position: relative;
-  }
-
-  .nav {
+  body {
     overflow-x: hidden;
   }
+
   .menu {
     position: absolute;
     right: 0;
@@ -563,6 +560,7 @@ footer h1 {
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    /* display: none; */
   }
 
   .toggle .menu-btn_line1 {
@@ -576,6 +574,7 @@ footer h1 {
   }
   .menu-active {
     transform: translateX(0%);
+    /* display: flex; */
   }
 
   .menu li {
