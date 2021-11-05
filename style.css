@@ -543,6 +543,10 @@ footer h1 {
 }
 
 @media screen and (max-width: 650px) {
+
+	html{
+		overflow-x: hidden;
+	}
   body {
     overflow-x: hidden;
   }
