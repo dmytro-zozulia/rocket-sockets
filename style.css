@@ -18,6 +18,43 @@ main {
   height: 100%;
 }
 
+/*intro*/
+.intro {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #090c02;
+  transition: 1s;
+}
+.intro-header {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 7;
+}
+
+.logo-intro {
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+.logo-intro.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.logo-intro.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
 /*NAV with GRID*/
 
 .logo-text {
@@ -34,6 +71,15 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  transform: translateY(-100%);
+}
+
+.nav.slide-down {
+  transform: translateY(0);
+  transition: 0.6s ease-in-out;
+}
+.nav.loaded-down {
+  transform: translateY(0);
 }
 
 .menu-btn {
@@ -77,6 +123,24 @@ header {
 .menu li {
   display: inline;
   margin-left: 2rem;
+  position: relative;
+}
+
+.menu li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.5rem;
+  height: 2px;
+  background-color: red;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+}
+.menu li a:focus::before,
+.menu li a:hover::before {
+  transform: scaleX(1);
 }
 
 .menu a {
@@ -158,6 +222,7 @@ header {
   align-items: flex-end;
   margin-top: 10rem;
 }
+
 .platform-promo p {
   font-size: 2rem;
   font-weight: 600;
@@ -193,6 +258,21 @@ header {
   width: 110%;
   position: relative;
   bottom: 2rem;
+  opacity: 0;
+  transform: translateY(-1%);
+}
+
+.inside-studio.fade-in-from-top {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease-in-out;
+}
+
+.tangled-cords.fade-in-from-right,
+.story-text.fade-in-from-right {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.8s ease-in-out 0.5s, opacity 0.8s ease-in-out 0.5s;
 }
 
 .story-text {
@@ -200,15 +280,19 @@ header {
   width: 100%;
   position: relative;
   align-self: flex-start;
+  opacity: 0;
+  transform: translateX(1%);
 }
 
 .tangled-cords {
   grid-area: tangled-cords;
   width: 100%;
   position: relative;
-  right: 4vw;
-  bottom: 4rem;
+  right: 3vw;
+  bottom: 3rem;
   align-self: flex-start;
+  opacity: 0;
+  transform: translateX(1%);
 }
 
 .story-text h1 {
@@ -238,6 +322,12 @@ header {
   width: 110%;
   overflow: hidden;
   bottom: 5rem;
+  opacity: 0;
+}
+
+.background-line.fade-in-from-top {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
 }
 
 #contact-line {
@@ -247,16 +337,12 @@ header {
   z-index: -1;
   top: 5%;
   overflow: hidden;
+  opacity: 0;
 }
 
-#contact-line-2 {
-  position: absolute;
-  display: flex;
-  width: 40%;
-  z-index: -1;
-  right: 93.5%;
-  top: 14%;
-  overflow: hidden;
+#contact-line.fade-in-from-top {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
 }
 
 #contact {
@@ -310,31 +396,90 @@ header {
 #contact-right {
   display: grid;
   overflow: hidden;
+  opacity: 0;
+  transform: translate(40px, 0);
+}
+
+#contact-right.fade-in-from-right {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: transform 0.6s ease-in-out 1.3s, opacity 0.6s ease-in-out 1.3s;
+}
+
+#contact-line-2 {
+  position: absolute;
+  display: flex;
+  width: 40%;
+  z-index: -1;
+  right: 93.5%;
+  top: 14%;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-20px, 0);
 }
 
 #contact-text {
   grid-column: 1/4;
   align-self: flex-start;
+  opacity: 0;
+  transform: translate(-20px, 0);
+}
+
+#contact-text.fade-in-from-left,
+#contact-line-2.fade-in-from-left {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: transform 0.6s ease-in-out 1.3s, opacity 0.6s ease-in-out 1.3s;
 }
 
 #mailbox-xs {
   max-width: 40%;
   grid-column: 1/2;
-  transform: rotate(60deg) translate(0, 5vh);
+  transform: translate(-30px, 1vh);
+  opacity: 0;
 }
+#mailbox-xs.fly-rotating-from-left {
+  transform: translate(0, 1vh) rotate(60deg);
+  opacity: 1;
+  transition: all 0.7s ease-in-out;
+}
+
 #mailbox-sm {
   max-width: 55%;
-
+  opacity: 0;
   grid-column: 2/3;
-  transform: rotate(180deg);
+  transform: translate(-30px, 0) rotate(160deg);
 }
+
+#mailbox-sm.fly-rotating-from-left {
+  transform: translate(0, 0) rotate(180deg);
+  opacity: 1;
+  transition: all 0.6s ease-in-out 0.5s;
+}
+
 #mailbox-md {
   max-width: 80%;
   grid-column: 3/4;
-  transform: rotate(30deg) translate(0, -5vh);
+  transform: rotate(10deg) translate(-30px, -5vh);
+  opacity: 0;
 }
+
+#mailbox-md.fly-rotating-from-left {
+  transform: translate(0, -5vh) rotate(30deg);
+  opacity: 1;
+  transition: all 0.5s ease-in-out 0.8s;
+}
+
 #mailbox-xl {
   max-width: 100%;
+  transform: translate(-30px, 0) rotate(-20deg);
+  opacity: 0;
+}
+
+#mailbox-xl.fly-rotating-from-left {
+  transform: translate(0, 0) rotate(0);
+  opacity: 1;
+  transition: all 0.4s ease-in-out 1s;
 }
 
 #contact-right h1 {
@@ -391,11 +536,25 @@ footer h1 {
   background: none;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 #gtr-strings {
   width: 100%;
   overflow: hidden;
+}
+
+@media only screen and (min-width: 560px) {
+  .text-block {
+    font-size: calc(0.8vh + 2 vw);
+  }
+
+  .mask-l-r {
+    height: 25%;
+    right: 20%;
+    top: 35.5%;
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 1376px) {
@@ -504,9 +663,9 @@ footer h1 {
 
   .tangled-cords {
     grid-area: tangled-cords;
-    width: 80%;
+    width: 90%;
     position: relative;
-    right: 4vw;
+    right: 3vw;
     bottom: 2rem;
     align-self: flex-start;
   }
@@ -515,7 +674,20 @@ footer h1 {
   }
 }
 
+@media screen and (max-width: 950px) {
+  .tangled-cords {
+    right: 2vw;
+    bottom: 1rem;
+  }
+}
 @media screen and (max-width: 768px) {
+  .inside-studio {
+    top: 0.2rem;
+  }
+  .tangled-cords {
+    right: 2vw;
+    bottom: 0;
+  }
   #contact-text h1 {
     font-size: 2rem;
   }
@@ -543,14 +715,38 @@ footer h1 {
 }
 
 @media screen and (max-width: 650px) {
-
-	html{
-		overflow-x: hidden;
-	}
+  html {
+    overflow-x: hidden;
+  }
   body {
     overflow-x: hidden;
   }
+  /* header,
+  nav {
+    position: relative;
+    z-index: 5;
+    transition: 1s ease;
+  }
 
+  main {
+    position: relative;
+  }
+
+  .sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: 1s ease;
+  } */
+
+  .heroImgAddMargin {
+    margin-top: 50px;
+  }
+
+  .nav {
+    padding: 0;
+    position: fixed;
+  }
   .menu {
     position: absolute;
     right: 0;
@@ -600,7 +796,7 @@ footer h1 {
       "platform-promo";
     align-items: center;
     justify-content: center;
-    margin: 0;
+    margin: 70px 0 0;
     grid-gap: 0;
     padding: 0;
   }
@@ -609,10 +805,11 @@ footer h1 {
     width: 100%;
     margin: 0;
     filter: brightness(80%);
+    z-index: -1;
   }
   .content-wrapper {
     margin-top: -40%;
-    z-index: 2;
+    z-index: 0;
     background: linear-gradient(
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0.3),
@@ -622,7 +819,7 @@ footer h1 {
       rgba(255, 255, 255, 1)
     );
 
-    padding: 3rem 0;
+    padding: 4rem 0;
   }
   .content-wrapper img {
     position: relative;
@@ -645,7 +842,7 @@ footer h1 {
 
   .platform-promo {
     align-items: center;
-    margin: 4rem 0;
+    margin: 6rem 0 4rem;
   }
   .platform-promo p {
     font-size: 1.5rem;
@@ -678,7 +875,7 @@ footer h1 {
   }
   .story-text {
     position: initial;
-    margin: 0 5% 10% 5%;
+    margin: 5% 5% 10% 5%;
     width: 90%;
   }
 
@@ -689,7 +886,6 @@ footer h1 {
     margin: 5% auto;
     align-items: center;
     position: relative;
-	  overflow-x: hidden;
   }
 
   #contact-line {
@@ -701,7 +897,6 @@ footer h1 {
   #mailbox-xs {
     display: none;
   }
-
   #contact-left {
     display: flex;
     justify-content: center;
@@ -711,6 +906,7 @@ footer h1 {
 
   #contact-right {
     grid-column: 1/3;
+    transform: translate(-40px, 0);
   }
 
   #contact-phone {
@@ -731,15 +927,37 @@ footer h1 {
   #mailbox-sm {
     display: block;
     position: absolute;
-    transform: rotate(0) translate(19rem, 15rem);
+    transform: translate(19rem, 17rem) rotate(20deg);
+  }
+
+  #mailbox-sm.fly-rotating-from-left {
+    transform: translate(17rem, 15rem) rotate(0);
+    opacity: 1;
+    transition: all 0.6s ease-in-out 0.3s;
+  }
+
+  #mailbox-xl {
+    max-width: 100%;
+    transform: translate(30px, 2rem) rotate(10deg);
+    opacity: 0;
+  }
+
+  #mailbox-xl.fly-rotating-from-left {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0.6s;
   }
   #gtr-strings {
-    width: 200%;
+    width: 300%;
     transform: translateX(-5rem);
   }
 }
 
 @media screen and (max-width: 520px) {
+  .greeting-text h1 {
+    font-size: 3rem;
+  }
+
   #mailbox-sm {
     transform: translate(16rem, 13rem);
   }
@@ -751,6 +969,129 @@ footer h1 {
   }
   .nav .logo {
     margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  #contact-line-2 {
+    display: none;
+  }
+
+  #contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 35% 25%;
+    justify-content: center;
+    margin: 5% auto;
+    align-items: center;
+  }
+
+  #contact-middle {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+  #contact-left {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0 1rem 2rem 3rem;
+    justify-content: flex-start;
+    align-self: flex-end;
+  }
+  #contact-text {
+    width: 90%;
+  }
+  #contact-right {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  #mailbox-xl {
+    max-width: 80%;
+    align-self: center;
+    justify-self: center;
+    transform: rotate(20deg);
+    top: 2rem;
+    position: relative;
+  }
+
+  #contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #contact-middle {
+    margin-top: 2rem;
+  }
+  .content-wrapper {
+    margin-top: -50%;
+  }
+  #home {
+    margin-top: 50px;
+  }
+  .platform-promo {
+    align-items: center;
+    margin: 3rem 0 3rem;
+  }
+
+  footer {
+    width: 100%;
+    height: 18vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  footer h1 {
+    font-style: italic;
+    margin: 1.5rem 0 0 4rem;
+  }
+
+  #legal-notice {
+    font-size: 0.5rem;
+    line-height: 150%;
+    margin: 1.5rem 0 0 4rem;
+  }
+
+  #gtr-strings {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+  }
+  #scroll-up-btn {
+    position: absolute;
+    right: 2rem;
+    transform: translateY(50%);
+    bottom: 50%;
+  }
+
+  #scroll-up-btn svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .greeting-text h1 {
+    font-size: 2.5rem;
+  }
+  .platform-promo p {
+    font-size: 1.2rem;
+  }
+
+  #contact-right h1 {
+    font-size: 1.2rem;
   }
 }
 
