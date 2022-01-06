@@ -1030,10 +1030,10 @@ footer h1 {
     margin-top: 2rem;
   }
   .content-wrapper {
-    margin-top: -50%;
+    margin-top: -45%;
   }
   #home {
-    margin-top: 50px;
+    margin-top: 0;
   }
   .platform-promo {
     align-items: center;
